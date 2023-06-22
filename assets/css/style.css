@@ -39,3 +39,14 @@ nav a:hover,.active{
     color:red;
     border-bottom: 1px solid red;
 }
+/* main image */
+#hero-main{
+    height:700px;
+    width:100%;
+    overflow: hidden;
+}
+#hero-image{
+height: 700px;
+width:100%;
+background: url("../image/hero-image1.jpg") no-repeat center center;
+}
