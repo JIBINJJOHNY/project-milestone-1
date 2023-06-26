@@ -7,86 +7,368 @@ body{
    
 }
 header{
-    background-color: white;  
-  width: 90%;
+    padding-left: 5%;
     margin:0 auto;
-}
-#logo{
-    float: left; 
-    padding: 10px 0; 
-}
-nav{
-    float: right;
-
-}
-nav ul{
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-nav li{
-    display: inline-block;
-    margin-left:70px;
-    padding-top:30px ;
-    position: relative;
-}
-nav a{
-    color: rgb(49, 42, 42);
-    text-decoration:none;
-    text-transform: uppercase;
-    
-}
-nav a:hover,.active{
-    color:red;
-    border-bottom: 1px solid red;
-}
-/* main image */
-#hero-main{
-    height:700px;
-    width:100%;
+    box-sizing: border-box ;
     overflow: hidden;
 }
-#hero-image{
-height: 700px;
-width:100%;
-background: url("../image/Home/hero-image1.jpg") no-repeat center center;
+.navbar{
+    width: 100%;
+    display: flex;
+    align-items: center;
 }
-
-/* cast */
-#cast{
-    background:linear-gradient(45deg,#eca7a4,#fbf4f4);
-    padding: 20px 10%;
-    padding-bottom: 100px;
-}
-#cast h1{
+h2{
     text-align: center;
     padding-bottom: 15px;
     color: #a42722;
     text-shadow:0 5px 10px rgba(0,0,0,.2) ;
     font-size: 50px;
 }
-#cast .rows{
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(270px,1fr));
-    gap:30px;
+
+
+#logo{
+    width: 200px;
+    cursor: pointer;
+    margin: 30px 0;
+}
+.menu-icon{
+    width: 25px;
+    cursor: pointer;
+    display: none;
+     
+}
+nav{
+    flex: 1;
+    text-align: right;
 
 }
-#cast .rows .images{
-    box-shadow: 0 5px 10px rgba(0,0,0,.8) ;
-    border-radius: 10%;
+nav ul li{
+   list-style: none;
+   display: inline-block;
+   margin-right: 30px;
+
+}
+nav ul li a{
+    color: rgb(49, 42, 42);
+    text-decoration:none;
+    text-transform: uppercase;
+    
+}
+nav ul li a:hover {
+    color:red;
+    border-bottom: 1px solid red;
+}
+/* main image */
+
+.hero-image{
+height: 700px;
+
+
+background: url("../image/Home/hero-image4.jpeg") no-repeat center center ;
+background-size:cover;
+}
+
+/* cast */
+.rows{
+    display: grid ; 
+    grid-template-columns: 33% 33% 33%;
+    text-align: center;
+
+}
+
+.images{
+    height: 200px;
+    width: 200px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border: 6px solid #BFA561;
+    border-radius: 50%;
+
+}
+
+.images:hover { 
+transform: scale(1.1);
+}
+/* trophies*/
+#awards {
+   
+   margin-left: 10%;
+   margin-right: 10%;
+ 
+ }
+ .award-column{   
+        display: flex;   
+        flex-wrap: wrap;
+        gap: 1em;
+       
+      }
+.award-column > *{
+  flex: 1 1 30%;
+ 
+}
+ .award-column >div >img{
+height: 180px;
+margin-left: 35%;
+}
+.award-column >div >h3,p{
     text-align: center;
 }
-#cast .rows .images img{
-   height:200px;
-    width: 200px;
-    border-radius: 50%;
-    padding-top: 20px;
+
+/* About */
+#about {
+    padding: 20px 10%;
+    padding-bottom: 100px; 
+    background: url(../image/Home/hero-image1.jpg) no-repeat;
+    background-size: cover;
+
 }
-#cast .rows .images h2{
-    font-size: 25px;
-    color: rgb(49, 42, 42);
-}
-#cast .rows .images:hover{
-	transform: scale(1.03);
+
+#about >.story{
+    border: 1px solid rgba(60, 60, 60, 1.1) ;
+    background: rgba(60, 60, 60, 0.6);
+    letter-spacing: 1px;
+    text-indent: 50px;
+    text-align: justify;
+    color:white;
+    padding: 30px;
+   
     
+}
+
+/* Quotes */
+#quotes{
+    display: flex;
+   align-items:center; 
+   background:#FAE9E9 ;
+}
+.quote-text{ font-style: italic;
+    line-height: 1.5;
+    color: #a42722;
+     max-width: 100%;
+     text-transform:lowercase;
+   
+   
+}
+/* Review form */
+
+#review{
+    width: 100%;
+height: 900px;
+    background:linear-gradient(rgba(0,0,0,0.6),#934744),url(../image/Home/image.jpeg);
+    background-size: cover;
+}
+.review-form{
+  margin: 100px 40px;
+  color: #fff;
+  background-color: rgba(60, 60, 60, 0.4);
+  max-width: 500px;
+  position: relative;
+  left: 30%;
+  padding:100px;
+}
+/* Add hover and focus effect to form */
+.review-form:hover,.review-form:focus-within{
+    transform: scale(1.1);
+    background: rgb(255,255,255);
+background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(176,80,76,1) 0%, rgba(241,67,80,1) 100%);
+
+}
+      
+form {
+
+   width: 400px;
+    
+  }
+  
+  div {
+    margin-bottom: 30px;
+  
+  }
+  
+
+label {
+    display: flex;
+    width: 50px;
+    font-weight: bold;
+   
+}
+  
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    outline: 0;
+    margin-left: 20px;
+
+    
+  }
+  .review-rating{
+	display: flex;
+	flex-direction: row;
+    margin: 2px;
+  }
+  fieldset{
+    border: none;
+  }
+
+  .button {
+    padding: 10px 20px;
+    background-color: #148935;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+
+  }
+  footer {
+    height: 350px;
+    background:rgba(0,0,0,.8) ;
+    padding-top: 50px;
+}
+footer > h3{
+color: #fff;
+    text-align: center;
+  
+}
+footer > p{
+ color: #fff;
+ text-align: center;
+}
+
+
+.social-media {
+   text-align: center;
+ 
+}
+
+.social-media > li {
+    display: inline;
+}
+
+.social-media i {
+    font-size: 160%;
+    margin: 1%;
+    padding: 5%;
+    color: #3a3a3a;
+}
+
+
+@media only screen and (max-width:700px){
+
+    nav ul{
+        width: 100%;
+        position: absolute;
+        top: 90px;
+        right: 0%;
+        z-index: 1;
+        background:  #a42722;
+        
+    }
+    nav ul li{
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    nav ul li a{
+        color:rgba(0,0,0,.8);
+    }
+    .menu-icon{
+        display: block;
+    }
+}
+@media only screen and (max-width:700px){
+    .hero-image {
+        background:url(../image/Home/media.png)no-repeat center center;
+        
+    }
+}
+@media only screen and (max-width:700px) {
+    .rows{
+        display: grid ; 
+        grid-template-columns: 50% 50%;
+        gap: 1rem;
+
+   
+ 
+}.images{
+    height: 100px;
+    width: 100px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border: 6px solid #BFA561;
+    border-radius: 50%;
+
+}.cast > h3{
+    font-size: 13px;;
+} .award-column{   
+    display: flex;   
+    flex-wrap: wrap;
+    gap: 1em;
+  }
+.award-column > *{
+flex: 1 1 40%;
+}
+#about {
+    padding: 20px 10%;
+    padding-bottom: 100px; 
+    background: url(../image/Home/hero-image1.jpg) no-repeat;
+    background-size: cover;
+
+}
+#about >.story{
+    border: 1px solid rgba(60, 60, 60, 1.1) ;
+    background: rgba(60, 60, 60, 0.6);
+    color:white;
+    padding: 30px;
+   
+    
+}#review{
+    width: 100%;
+    height: 900px;
+    background: linear-gradient(rgba(0,0,0,0.6),#934744),url(../image/Home/image.jpeg);
+    background-size: cover;
+    margin: inherit;
+}
+  .review-form{
+    margin: 0px 0px;
+    color: #fff;
+    background-color: rgba(60, 60, 60, 0.4);
+    letter-spacing: 1px;
+    max-width: 300px;
+    position: relative;
+    left: 0%;
+    padding-right: 80px;
+    padding-left: 35px;
+}
+   input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    outline: 0;
+    margin-left: 20px;
+
+    
+  }fieldset{
+ 
+  border: none;
+  }
+  
+  .quote-text{
+    font-style: italic;
+    line-height: 1.5;
+     max-width: 700px;
+     text-transform:lowercase;
+     padding-left: 10%;
+}.button  { padding: 10px 20px;
+background-color: #148935;
+color: white;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+margin-top: 20px;
+margin-left: 45%;
+}
 }
